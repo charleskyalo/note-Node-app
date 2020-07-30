@@ -1,3 +1,4 @@
+const process = require('process');
 process.stdout.write('Starting app.js \n');
 const notes = require('./notes.js');
 

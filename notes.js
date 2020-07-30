@@ -1,3 +1,5 @@
+const process = require('process');
+
 process.stdout.write(`Starting note.js \n`);
 
 process.stdout.write(`**********\n`);
