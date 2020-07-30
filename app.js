@@ -1,4 +1,4 @@
-console.log('Starting app.js');
+process.stdout.write('Starting app.js \n');
 const notes = require('./notes.js');
 
 const yargs = require('yargs');
@@ -27,17 +27,17 @@ const argv = yargs
     })
     .help()
     .argv;
-var command = argv._[0];
-console.log('Command: ', command);
-console.log('Yargs', argv);
+let command = argv._[0];
+process.stdout.write(`Command:  ${command} \n`);
+
 
 if (command === 'add') {
     var note = notes.addNote(argv.title, argv.body);
     if (note) {
-        console.log('Note created');
+        process.stdout.write(` Note created \n`);
         notes.logNote(note);
     } else {
-        console.log('Note title taken');
+        process.stdout.write('Note title taken \n');
     }
 } else if (command === 'list') {
     let allNotes = notes.getAll();
@@ -47,15 +47,18 @@ if (command === 'add') {
 } else if (command === 'read') {
     let note = notes.getNote(argv.title);
     if (note) {
-        console.log('Note found');
+        process.stdout.write(`Note found \n`);
         notes.logNote(note);
     } else {
-        console.log('Note not found');
+        process.stdout.write(`Note not found \n`);
     }
 } else if (command === 'remove') {
     let noteRemoved = notes.removeNote(argv.title);
     let message = noteRemoved ? "Note was removed " : "Note not found ";
-    console.log(message);
+    process.stdout.write(`${message} \n`);
+} else if (command === undefined) {
+    process.stdout.write(`please input a command \n`);
+
 } else {
-    console.log('Command not recognized');
+    process.stdout.write(`Command not recognized \n`);
 }
