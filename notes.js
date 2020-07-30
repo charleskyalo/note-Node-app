@@ -1,4 +1,12 @@
-console.log('Starting notes.js');
+process.stdout.write(`Starting note.js \n`);
+
+process.stdout.write(`**********\n`);
+
+process.stdout.write(`             note taking application  made using node.js  \n`);
+
+process.stdout.write(`**********\n`);
+
+
 const fs = require('fs');
 
 
