@@ -3,7 +3,7 @@ console.log('Starting app.js');
 const fs = require('fs');
 
 const notes = require('./notes.js');
-const _ = require('lodash');
+/* const _ = require('lodash'); */
 const yargs = require('yargs');
 const titleOptions = {
     describe: 'Title of note',
