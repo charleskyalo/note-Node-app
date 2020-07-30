@@ -33,7 +33,7 @@ process.stdout.write(`Command:  ${command} \n`);
 
 
 if (command === 'add') {
-    var note = notes.addNote(argv.title, argv.body);
+    const note = notes.addNote(argv.title, argv.body);
     if (note) {
         process.stdout.write(` Note created \n`);
         notes.logNote(note);
@@ -42,14 +42,14 @@ if (command === 'add') {
     }
 } else if (command === 'list') {
     let allNotes = notes.getAll();
-    console.log(` Printing ${allNotes.length} note(s)`);
-    allNotes.forEach(note => notes.logNote(note));
+    process.stdout.write(` Printing ${allNotes.length} note(s)\n`);
+    allNotes.forEach(singleNote => notes.logNote(singleNote));
 
 } else if (command === 'read') {
-    let note = notes.getNote(argv.title);
-    if (note) {
+    const readNote = notes.getNote(argv.title);
+    if (readNote) {
         process.stdout.write(`Note found \n`);
-        notes.logNote(note);
+        notes.logNote(readNote);
     } else {
         process.stdout.write(`Note not found \n`);
     }
