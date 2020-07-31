@@ -15,6 +15,7 @@ const bodyOptions = {
 }
 
 const argv = yargs
+    .usage(`Usage: $0 <command> [options]`)
     .command('add', 'Add a new note', {
         title: titleOptions,
         body: bodyOptions
@@ -26,7 +27,9 @@ const argv = yargs
     .command('remove', 'Remove a note', {
         title: titleOptions
     })
-    .help()
+    .help('h')
+    .alias('h', 'help')
+    .epilog('copyright 2020')
     .argv;
 let command = argv._[0];
 process.stdout.write(`Command:  ${command} \n`);
@@ -58,8 +61,7 @@ if (command === 'add') {
     let message = noteRemoved ? "Note was removed " : "Note not found ";
     process.stdout.write(`${message} \n`);
 } else if (command === undefined) {
-    process.stdout.write(`please input a command \n`);
-
+    process.stdout.write(`type  'node app.js --h' to see usage of the application\n`);
 } else {
     process.stdout.write(`Command not recognized \n`);
 }
