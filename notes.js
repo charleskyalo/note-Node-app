@@ -1,11 +1,8 @@
 const process = require('process');
 
 process.stdout.write(`Starting note.js \n`);
-
 process.stdout.write(`**********\n`);
-
-process.stdout.write(`             note taking application  made using node.js  \n`);
-
+process.stdout.write(`note taking command line application  made using node.js\n`);
 process.stdout.write(`**********\n`);
 
 
@@ -61,8 +58,8 @@ const removeNote = (title) => {
 };
 const logNote = (note) => {
     process.stdout.write(`-------\n`);
-    process.stdout.write(`Title: ${note.title}`);
-    process.stdout.write(`Body:${note.body}`);
+    process.stdout.write(`Title: ${note.title}   `);
+    process.stdout.write(`Body:${note.body} \n`);
 }
 
 module.exports = {
