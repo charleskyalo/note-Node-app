@@ -24,7 +24,7 @@ You can [signup and take the course](https://nt.dev?ref=6bcda7ac) if you are an 
 ## usage
 
 To use this note app you must have node installed development environment.
-if not install it either using [nvm]() or install it from the [node-js foundation]().
+if not install it either using [nvm](https://github.com/nvm-sh/nvm) or install it from the [node-js foundation](https://nodejs.org/).
 
 clone this repository using
 then cd to that directory;
