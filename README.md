@@ -1,4 +1,4 @@
-# node node app
+# node note app
 
 ## Table of contents
 
