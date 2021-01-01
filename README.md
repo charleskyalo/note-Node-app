@@ -47,4 +47,44 @@ To check for the app usage run
 ```bash
 $ node app.js --h
 
+Starting app.js 
+Starting note.js 
+**********
+note taking command line application  made using node.js
+**********
+Usage: app.js <command> [options]
+
+Commands:
+  app.js add     Add a new note
+  app.js list    list all notes
+  app.js read    Read a note
+  app.js remove  Remove a note
+
+Options:
+  --version   Show version number                                      [boolean]
+  -h, --help  Show help                                                [boolean]
+
+copyright 2020
+
+==================================================
+node app.js add --h
+
+**********
+app.js add
+
+Add a new note
+
+Options:
+  --version    Show version number                                     [boolean]
+  -h, --help   Show help                                               [boolean]
+  --title, -t  Title of note                                          [required]
+  --body, -b   Body of note                                           [required]
+
+====================================================
+add a new note example 
+
+node app.js add -t "hello" -b "try it out"
+
 ```
+
+
